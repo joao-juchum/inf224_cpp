@@ -27,7 +27,7 @@ public:
 
     // Play method (specific to Video)
     void play() const override {
-        std::string command = "mpv " + getFilePath() + " &";
+        std::string command = "mpv " + Multimidia::getFilePath() + " &";
         system(command.data());
     }
 };

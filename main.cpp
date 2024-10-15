@@ -5,26 +5,47 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 #include "Multimidia.h"
+#include "Photo.h"
+#include "Video.h"
 using namespace std;
 
-int main(int argc, const char* argv[])
+int main()
 {
     std::cout << "Hello brave new world" << std::endl;
     
+    // Create some multimedia objects
+    Photo p1("banana", "./images_inf224/banana.jpeg", 48.8584, 2.2945);
+    Photo p2("cat", "./images_inf224/cat.jpeg", 40.6892, 74.0445);
+    Photo p3("Miniom", "./images_inf224/Miniom.jpeg", 40.6892, 74.0445);
+    Video v1("video1", "./videos_inf224/Video_cat_1.mp4", 120);
+    Video v2("video2", "./videos_inf224/Video_cat_2.mp4", 60);
+    Video v3("video3", "./videos_inf224/Video_cat_3.mp4", 90);
+    
 
-    // Test de la classe
-    Multimidia* Video = new Multimidia("Video", "home/Telecom/inf224/Videos");
-    Multimidia* Foto = new Multimidia("Foto", "home/Telecom/inf224/Fotos");
+    // Doing polymorphism
+    std::vector<Multimidia*> mediaList;
+    mediaList.push_back(&p1);
+    mediaList.push_back(&p2);
+    mediaList.push_back(&p3);
+    mediaList.push_back(&v1);
+    mediaList.push_back(&v2);
+    mediaList.push_back(&v3);
 
-    std::string nameMidia1 = Video->getName();
-    std::string nameMidia2 = Foto->getName();
+    // Display the multimedia objects
+    std::cout << "Displaying: \n";
+    for (const auto& media : mediaList) {
+        std::cout << "\t ---";
+        media->display(std::cout);
+        std::cout << "\n";
+    }
 
-    std::string PathMidia1 = Video->getFilePath();
-    std::string PathMidia2 = Foto->getFilePath();
-
-    std::cout << "Media 01: " << nameMidia1 << " \n \tFile path: " << PathMidia1 << "\n";
-    std::cout << "Media 02: " << nameMidia2 << " \n \tFile path: " << PathMidia2 << "\n";
+    // Play the multimedia objects
+    std::cout << "Playing: \n";
+    for (const auto& media : mediaList) {
+        media->play();
+    }
 
     return 0;
 }
