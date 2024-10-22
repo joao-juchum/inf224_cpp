@@ -19,7 +19,7 @@ Here is the English translation:
 
 ### 6th Step: Movies and tables ✅
 
-### 7th Step: Object destruction and copying
+### 7th Step: Object destruction and copying ✅
 
 ### 8th Step: Creating groups
 

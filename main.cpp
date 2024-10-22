@@ -10,17 +10,19 @@
 #include "Photo.h"
 #include "Video.h"
 #include "film.h"
+#include "group.h"
 
 using namespace std;
 
 void testPhotoVideo();
 void testFilm();
+void testGroup();
 
 int main()
 {
     std::cout << "Hello brave new world" << std::endl;
-    //testPhotoVideo();
-    testFilm();
+    testPhotoVideo();
+    //testFilm();
 
     return 0;
 }
@@ -86,4 +88,44 @@ void testFilm() {
     film3 = film1;
     std::cout << "\nFilm3 (assigned from Film1) details:\n";
     film3.display(std::cout);
+}
+
+void testGroup() {
+    // Create some multimedia objects
+    Photo* p1 = new Photo("banana", "./images_inf224/banana.jpeg", 48.8584, 2.2945);
+    Photo* p2 = new Photo("cat", "./images_inf224/cat.jpeg", 40.6892, 74.0445);
+    Video* v1 = new Video("video1", "./videos_inf224/Video_cat_1.mp4", 120);
+    int durations[] = {10, 20, 30};
+    Film* f1 = new Film("Film1", "/path/to/film1", 90, 3, durations);
+
+    // Create groups
+    Group photoGroup("Photo Group");
+    Group videoGroup("Video Group");
+    Group mixedGroup("Mixed Group");
+
+    // Add objects to groups
+    photoGroup.push_back(p1);
+    photoGroup.push_back(p2);
+
+    videoGroup.push_back(v1);
+
+    mixedGroup.push_back(p1);
+    mixedGroup.push_back(v1);
+    mixedGroup.push_back(f1);
+
+    // Display groups
+    std::cout << "\nPhoto Group details:\n";
+    photoGroup.display(std::cout);
+
+    std::cout << "\nVideo Group details:\n";
+    videoGroup.display(std::cout);
+
+    std::cout << "\nMixed Group details:\n";
+    mixedGroup.display(std::cout);
+
+    // Clean up
+    delete p1;
+    delete p2;
+    delete v1;
+    delete f1;
 }

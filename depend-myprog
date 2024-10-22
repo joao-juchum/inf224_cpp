@@ -1,0 +1,2 @@
+Multimidia.o: Multimidia.cpp Multimidia.h
+main.o: main.cpp Multimidia.h Photo.h Video.h film.h
