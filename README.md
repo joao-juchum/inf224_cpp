@@ -27,7 +27,7 @@ Here is the English translation:
 
 ### 10th Step: Consistent data management ✅
 
-### 11th Step: Client / server
+### 11th Step: Client / server ✅
 
 ### 12th Step: Serialization / deserialization
 
