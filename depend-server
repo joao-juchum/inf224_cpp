@@ -1,0 +1,5 @@
+server.o: server.cpp MediaManager.h Multimidia.h Photo.h Video.h film.h \
+ group.h tcpserver.h ccsocket.h
+tcpserver.o: tcpserver.cpp tcpserver.h ccsocket.h
+ccsocket.o: ccsocket.cpp ccsocket.h
+Multimidia.o: Multimidia.cpp Multimidia.h

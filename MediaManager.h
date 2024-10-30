@@ -49,6 +49,38 @@ class MediaManager{
             return group;
         }
 
+        // Get mulmidia table
+        const std::map<std::string, MultimidiaPtr>& getMediaTable() const {
+            return mediaTable;
+        }
+
+        // Get group table
+        const std::map<std::string, GroupPtr>& getGroupTable() const {
+            return groupTable;
+        }
+
+        //Get multimedia objects
+        MultimidiaPtr getMedia(const std::string& name) const {
+            auto temp = mediaTable.find(name);
+            if (temp != mediaTable.end()){
+                return temp->second;
+            } else {
+                std::cout << "Media object " << name << " not found\n";
+                return nullptr;
+            }
+        }
+
+        //Get groups
+        GroupPtr getGroup(const std::string& name) const {
+            auto temp = groupTable.find(name);
+            if (temp != groupTable.end()){
+                return temp->second;
+            } else {
+                std::cout << "Group " << name << " not found\n";
+                return nullptr;
+            }
+        }
+
         //Display multimedia objects
         void displayMedia(const std::string& name) const {
             auto temp = mediaTable.find(name);

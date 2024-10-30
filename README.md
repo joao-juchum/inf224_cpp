@@ -21,11 +21,11 @@ Here is the English translation:
 
 ### 7th Step: Object destruction and copying ✅
 
-### 8th Step: Creating groups
+### 8th Step: Creating groups ✅
 
-### 9th Step: Automatic memory management
+### 9th Step: Automatic memory management ✅
 
-### 10th Step: Consistent data management
+### 10th Step: Consistent data management ✅
 
 ### 11th Step: Client / server
 
