@@ -11,7 +11,9 @@ private:
 public:
     // Constructor with arguments
     Video(const std::string& name, const std::string& filePath, int duration)
-        : Multimidia(name, filePath), duration(duration) {}
+        : Multimidia(name, filePath), duration(duration) {
+        std::cout << "Video object " << getName() << " created\n";
+        }
 
     // Getter (accessor)
     int getDuration() const { return duration; }
@@ -29,6 +31,11 @@ public:
     void play() const override {
         std::string command = "mpv " + Multimidia::getFilePath() + " &";
         system(command.data());
+    }
+
+    // Destructor
+    ~Video() {
+        std::cout << "Video object " << getName() << " destroyed\n";
     }
 };
 #endif

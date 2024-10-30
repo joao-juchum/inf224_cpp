@@ -33,6 +33,11 @@ public:
         std::string command = "imagej " + Multimidia::getFilePath() + " &";
         system(command.data());
     }
+
+    // Destructor
+    ~Photo(){
+        std::cout << "Photo object " << getName() << " destroyed/n";  
+    }
 };
 
 #endif

@@ -21,11 +21,13 @@ public:
         } else {
             chapterDurations = nullptr;
         }
+        std::cout << "Film object " << getName() << " created\n";
     }
 
     // Destructor
     ~Film() {
         delete[] chapterDurations;
+        std::cout << "Film object " << getName() << " destroyed\n";
     }
 
     // Copy constructor

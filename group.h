@@ -2,12 +2,14 @@
 #ifndef GROUP_H
 #define GROUP_H
 
+#include "Multimidia.h"
 #include <list>
 #include <string>
 #include <iostream>
-#include "Multimidia.h"
+#include <memory>
 
-class Group : public std::list<Multimidia*> {
+
+class Group : public std::list<std::shared_ptr<Multimidia>> {
 private:
     std::string name;
 

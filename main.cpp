@@ -6,6 +6,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <memory>
+
 #include "Multimidia.h"
 #include "Photo.h"
 #include "Video.h"
@@ -21,8 +23,9 @@ void testGroup();
 int main()
 {
     std::cout << "Hello brave new world" << std::endl;
-    testPhotoVideo();
+    //testPhotoVideo();
     //testFilm();
+    testGroup();
 
     return 0;
 }
@@ -92,11 +95,17 @@ void testFilm() {
 
 void testGroup() {
     // Create some multimedia objects
-    Photo* p1 = new Photo("banana", "./images_inf224/banana.jpeg", 48.8584, 2.2945);
-    Photo* p2 = new Photo("cat", "./images_inf224/cat.jpeg", 40.6892, 74.0445);
-    Video* v1 = new Video("video1", "./videos_inf224/Video_cat_1.mp4", 120);
+    std::shared_ptr<Photo> p1 = std::make_shared<Photo>("banana", "./images_inf224/banana.jpeg", 48.8584, 2.2945);
+    std::shared_ptr<Photo> p2 = std::make_shared<Photo>("cat", "./images_inf224/cat.jpeg", 40.6892, 74.0445);
+    std::shared_ptr<Video> v1 = std::make_shared<Video>("video1", "./videos_inf224/Video_cat_1.mp4", 120);
     int durations[] = {10, 20, 30};
-    Film* f1 = new Film("Film1", "/path/to/film1", 90, 3, durations);
+    std::shared_ptr<Film> f1 = std::make_shared<Film>("Film1", "./videos_inf224/Video_cat_2.mp4", 90, 3, durations);
+    
+    // Photo* p1 = new Photo("banana", "./images_inf224/banana.jpeg", 48.8584, 2.2945);
+    // Photo* p2 = new Photo("cat", "./images_inf224/cat.jpeg", 40.6892, 74.0445);
+    // Video* v1 = new Video("video1", "./videos_inf224/Video_cat_1.mp4", 120);
+    // int durations[] = {10, 20, 30};
+    // Film* f1 = new Film("Film1", "/path/to/film1", 90, 3, durations);
 
     // Create groups
     Group photoGroup("Photo Group");
@@ -122,10 +131,4 @@ void testGroup() {
 
     std::cout << "\nMixed Group details:\n";
     mixedGroup.display(std::cout);
-
-    // Clean up
-    delete p1;
-    delete p2;
-    delete v1;
-    delete f1;
 }
