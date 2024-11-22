@@ -1,0 +1,137 @@
+\doxysection{Socket\+Cnx Class Reference}
+\hypertarget{classSocketCnx}{}\label{classSocketCnx}\index{SocketCnx@{SocketCnx}}
+
+
+Manages the connection with a given client using a separate thread.  
+
+
+
+
+Collaboration diagram for Socket\+Cnx\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{classSocketCnx__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSocketCnx_a8e3ebcc2e4eefbc379c1fa8e42af86a1}{Socket\+Cnx}} (\mbox{\hyperlink{classTCPServer}{TCPServer}} \&server, \mbox{\hyperlink{classSocket}{Socket}} \texorpdfstring{$\ast$}{*}socket)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classSocketCnx}{Socket\+Cnx}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSocketCnx_aacd070cab0e3cf19cdaa4ec180b3b64c}{\texorpdfstring{$\sim$}{\string~}\+Socket\+Cnx}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classSocketCnx}{Socket\+Cnx}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSocketCnx_aa2ad22fb4fe4b78b3a9337e09475f10e}{process\+Requests}} ()
+\begin{DoxyCompactList}\small\item\em Processes incoming requests from the client. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTCPServer}{TCPServer}} \& \mbox{\hyperlink{classSocketCnx_ad46b42915ee50072a0307f0116403587}{server\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Reference to the \doxylink{classTCPServer}{TCPServer}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSocket}{Socket}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classSocketCnx_a51d23b906608701ef811a7d73f0de43e}{sock\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Pointer to the client\textquotesingle{}s \doxylink{classSocket}{Socket}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSocketBuffer}{Socket\+Buffer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classSocketCnx_af5f1e7aef17b14deb89f65d8c89eb619}{sockbuf\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classSocketBuffer}{Socket\+Buffer} for buffered communication. \end{DoxyCompactList}\item 
+std\+::thread \mbox{\hyperlink{classSocketCnx_a0b358d64acd070e4f54123bd7a011183}{thread\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Thread handling the client\textquotesingle{}s connection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the connection with a given client using a separate thread. 
+
+Each instance of \doxylink{classSocketCnx}{Socket\+Cnx} handles communication with a client in its own thread. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSocketCnx_a8e3ebcc2e4eefbc379c1fa8e42af86a1}\label{classSocketCnx_a8e3ebcc2e4eefbc379c1fa8e42af86a1} 
+\index{SocketCnx@{SocketCnx}!SocketCnx@{SocketCnx}}
+\index{SocketCnx@{SocketCnx}!SocketCnx@{SocketCnx}}
+\doxysubsubsection{\texorpdfstring{SocketCnx()}{SocketCnx()}}
+{\footnotesize\ttfamily Socket\+Cnx\+::\+Socket\+Cnx (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTCPServer}{TCPServer}} \&}]{server,  }\item[{\mbox{\hyperlink{classSocket}{Socket}} \texorpdfstring{$\ast$}{*}}]{socket }\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{classSocketCnx}{Socket\+Cnx}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em server} & Reference to the \doxylink{classTCPServer}{TCPServer} instance. \\
+\hline
+{\em socket} & Pointer to the connected \doxylink{classSocket}{Socket}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSocketCnx_aacd070cab0e3cf19cdaa4ec180b3b64c}\label{classSocketCnx_aacd070cab0e3cf19cdaa4ec180b3b64c} 
+\index{SocketCnx@{SocketCnx}!````~SocketCnx@{\texorpdfstring{$\sim$}{\string~}SocketCnx}}
+\index{````~SocketCnx@{\texorpdfstring{$\sim$}{\string~}SocketCnx}!SocketCnx@{SocketCnx}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SocketCnx()}{\string~SocketCnx()}}
+{\footnotesize\ttfamily Socket\+Cnx\+::\texorpdfstring{$\sim$}{\string~}\+Socket\+Cnx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for \doxylink{classSocketCnx}{Socket\+Cnx}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSocketCnx_aa2ad22fb4fe4b78b3a9337e09475f10e}\label{classSocketCnx_aa2ad22fb4fe4b78b3a9337e09475f10e} 
+\index{SocketCnx@{SocketCnx}!processRequests@{processRequests}}
+\index{processRequests@{processRequests}!SocketCnx@{SocketCnx}}
+\doxysubsubsection{\texorpdfstring{processRequests()}{processRequests()}}
+{\footnotesize\ttfamily void Socket\+Cnx\+::process\+Requests (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Processes incoming requests from the client. 
+
+Infinite loop that processes incoming requests on a client connection.
+
+This function runs in an infinite loop, reading requests and sending responses.
+
+Reads requests from the client, processes them using the server\textquotesingle{}s callback, and sends back responses. Handles errors and client disconnections. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classSocketCnx_ad46b42915ee50072a0307f0116403587}\label{classSocketCnx_ad46b42915ee50072a0307f0116403587} 
+\index{SocketCnx@{SocketCnx}!server\_@{server\_}}
+\index{server\_@{server\_}!SocketCnx@{SocketCnx}}
+\doxysubsubsection{\texorpdfstring{server\_}{server\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTCPServer}{TCPServer}}\& Socket\+Cnx\+::server\+\_\+}
+
+
+
+Reference to the \doxylink{classTCPServer}{TCPServer}. 
+
+\Hypertarget{classSocketCnx_a51d23b906608701ef811a7d73f0de43e}\label{classSocketCnx_a51d23b906608701ef811a7d73f0de43e} 
+\index{SocketCnx@{SocketCnx}!sock\_@{sock\_}}
+\index{sock\_@{sock\_}!SocketCnx@{SocketCnx}}
+\doxysubsubsection{\texorpdfstring{sock\_}{sock\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSocket}{Socket}}\texorpdfstring{$\ast$}{*} Socket\+Cnx\+::sock\+\_\+}
+
+
+
+Pointer to the client\textquotesingle{}s \doxylink{classSocket}{Socket}. 
+
+\Hypertarget{classSocketCnx_af5f1e7aef17b14deb89f65d8c89eb619}\label{classSocketCnx_af5f1e7aef17b14deb89f65d8c89eb619} 
+\index{SocketCnx@{SocketCnx}!sockbuf\_@{sockbuf\_}}
+\index{sockbuf\_@{sockbuf\_}!SocketCnx@{SocketCnx}}
+\doxysubsubsection{\texorpdfstring{sockbuf\_}{sockbuf\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSocketBuffer}{Socket\+Buffer}}\texorpdfstring{$\ast$}{*} Socket\+Cnx\+::sockbuf\+\_\+}
+
+
+
+\doxylink{classSocketBuffer}{Socket\+Buffer} for buffered communication. 
+
+\Hypertarget{classSocketCnx_a0b358d64acd070e4f54123bd7a011183}\label{classSocketCnx_a0b358d64acd070e4f54123bd7a011183} 
+\index{SocketCnx@{SocketCnx}!thread\_@{thread\_}}
+\index{thread\_@{thread\_}!SocketCnx@{SocketCnx}}
+\doxysubsubsection{\texorpdfstring{thread\_}{thread\_}}
+{\footnotesize\ttfamily std\+::thread Socket\+Cnx\+::thread\+\_\+}
+
+
+
+Thread handling the client\textquotesingle{}s connection. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp/\mbox{\hyperlink{tcpserver_8cpp}{tcpserver.\+cpp}}\end{DoxyCompactItemize}

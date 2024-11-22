@@ -1,0 +1,314 @@
+\doxysection{Media\+Manager Class Reference}
+\hypertarget{classMediaManager}{}\label{classMediaManager}\index{MediaManager@{MediaManager}}
+
+
+Manages multimedia objects and groups.  
+
+
+
+
+{\ttfamily \#include $<$Media\+Manager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPhoto}{Photo}} $>$ \mbox{\hyperlink{classMediaManager_af0c11766bc178fc433f3402de2107ef4}{create\+Photo}} (std\+::string name, std\+::string file\+Path, double latitude, double longitude)
+\begin{DoxyCompactList}\small\item\em Creates a \doxylink{classPhoto}{Photo} object and adds it to the media table. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classVideo}{Video}} $>$ \mbox{\hyperlink{classMediaManager_ab443e3646a44869014756fb767327a0f}{create\+Video}} (std\+::string name, std\+::string file\+Path, int duration)
+\begin{DoxyCompactList}\small\item\em Creates a \doxylink{classVideo}{Video} object and adds it to the media table. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classFilm}{Film}} $>$ \mbox{\hyperlink{classMediaManager_ad1895ef3527cffa47c955eda2d6ac25f}{create\+Film}} (std\+::string name, std\+::string file\+Path, int duration, int chapters, const int \texorpdfstring{$\ast$}{*}durations)
+\begin{DoxyCompactList}\small\item\em Creates a \doxylink{classFilm}{Film} object and adds it to the media table. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGroup}{Group}} $>$ \mbox{\hyperlink{classMediaManager_a724304063c30f59d228e3363f1b47f72}{create\+Group}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Creates a \doxylink{classGroup}{Group} object and adds it to the group table. \end{DoxyCompactList}\item 
+const std\+::map$<$ std\+::string, \mbox{\hyperlink{MediaManager_8h_aa114ead9712a117a8cbd0bb7e3ffde39}{Multimidia\+Ptr}} $>$ \& \mbox{\hyperlink{classMediaManager_a6a8d09fe541a2b4da22ede54ec32f507}{get\+Media\+Table}} () const
+\begin{DoxyCompactList}\small\item\em Gets the media table. \end{DoxyCompactList}\item 
+const std\+::map$<$ std\+::string, \mbox{\hyperlink{MediaManager_8h_a1938586896c27552375faeedfd692720}{Group\+Ptr}} $>$ \& \mbox{\hyperlink{classMediaManager_a720a63878f5b983df19a489065ef3e02}{get\+Group\+Table}} () const
+\begin{DoxyCompactList}\small\item\em Gets the group table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{MediaManager_8h_aa114ead9712a117a8cbd0bb7e3ffde39}{Multimidia\+Ptr}} \mbox{\hyperlink{classMediaManager_a67c23c1ca3362ee52828500e05b2b130}{get\+Media}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Retrieves a multimedia object by name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{MediaManager_8h_a1938586896c27552375faeedfd692720}{Group\+Ptr}} \mbox{\hyperlink{classMediaManager_a1528021e3f9205c34b28cafbd512c016}{get\+Group}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Retrieves a group by name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMediaManager_ad9baab63594c8d302f1927a5e7ec83e8}{display\+Media}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Displays information about a multimedia object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMediaManager_ac4762b7961e234d68670c16874479a6e}{display\+Group}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Displays information about a group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMediaManager_a39f9b36371ad9f7f82104770185f6e61}{play\+Media}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Plays a multimedia object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMediaManager_ac23d89e2ddc202d42c11cdba48e7d565}{remove\+Media}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Removes a multimedia object from the media table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMediaManager_a787ffbfe62bb8980608ebd4a126fef5c}{remove\+Group}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Removes a group from the group table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMediaManager_a7feb9eed20c90b52cfa847f19d9380f5}{save}} (const std\+::string \&filename) const
+\begin{DoxyCompactList}\small\item\em Saves the media data to a file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMediaManager_ae7fea2d1bb442996a7922f7ed173b788}{load}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Loads media data from a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages multimedia objects and groups. 
+
+The \doxylink{classMediaManager}{Media\+Manager} class provides functionalities to create, retrieve, display, play, and remove multimedia objects and groups. It also allows saving and loading media data. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMediaManager_ad1895ef3527cffa47c955eda2d6ac25f}\label{classMediaManager_ad1895ef3527cffa47c955eda2d6ac25f} 
+\index{MediaManager@{MediaManager}!createFilm@{createFilm}}
+\index{createFilm@{createFilm}!MediaManager@{MediaManager}}
+\doxysubsubsection{\texorpdfstring{createFilm()}{createFilm()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classFilm}{Film}} $>$ Media\+Manager\+::create\+Film (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{file\+Path,  }\item[{int}]{duration,  }\item[{int}]{chapters,  }\item[{const int \texorpdfstring{$\ast$}{*}}]{durations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a \doxylink{classFilm}{Film} object and adds it to the media table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the film. \\
+\hline
+{\em file\+Path} & File path of the film. \\
+\hline
+{\em duration} & Duration of the film in seconds. \\
+\hline
+{\em chapters} & Number of chapters in the film. \\
+\hline
+{\em durations} & Array of durations for each chapter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the created \doxylink{classFilm}{Film} object. 
+\end{DoxyReturn}
+\Hypertarget{classMediaManager_a724304063c30f59d228e3363f1b47f72}\label{classMediaManager_a724304063c30f59d228e3363f1b47f72} 
+\index{MediaManager@{MediaManager}!createGroup@{createGroup}}
+\index{createGroup@{createGroup}!MediaManager@{MediaManager}}
+\doxysubsubsection{\texorpdfstring{createGroup()}{createGroup()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGroup}{Group}} $>$ Media\+Manager\+::create\+Group (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a \doxylink{classGroup}{Group} object and adds it to the group table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the group. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the created \doxylink{classGroup}{Group} object. 
+\end{DoxyReturn}
+\Hypertarget{classMediaManager_af0c11766bc178fc433f3402de2107ef4}\label{classMediaManager_af0c11766bc178fc433f3402de2107ef4} 
+\index{MediaManager@{MediaManager}!createPhoto@{createPhoto}}
+\index{createPhoto@{createPhoto}!MediaManager@{MediaManager}}
+\doxysubsubsection{\texorpdfstring{createPhoto()}{createPhoto()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPhoto}{Photo}} $>$ Media\+Manager\+::create\+Photo (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{file\+Path,  }\item[{double}]{latitude,  }\item[{double}]{longitude }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a \doxylink{classPhoto}{Photo} object and adds it to the media table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the photo. \\
+\hline
+{\em file\+Path} & File path of the photo. \\
+\hline
+{\em latitude} & Latitude coordinate. \\
+\hline
+{\em longitude} & Longitude coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the created \doxylink{classPhoto}{Photo} object. 
+\end{DoxyReturn}
+\Hypertarget{classMediaManager_ab443e3646a44869014756fb767327a0f}\label{classMediaManager_ab443e3646a44869014756fb767327a0f} 
+\index{MediaManager@{MediaManager}!createVideo@{createVideo}}
+\index{createVideo@{createVideo}!MediaManager@{MediaManager}}
+\doxysubsubsection{\texorpdfstring{createVideo()}{createVideo()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classVideo}{Video}} $>$ Media\+Manager\+::create\+Video (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{file\+Path,  }\item[{int}]{duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a \doxylink{classVideo}{Video} object and adds it to the media table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the video. \\
+\hline
+{\em file\+Path} & File path of the video. \\
+\hline
+{\em duration} & Duration of the video in seconds. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the created \doxylink{classVideo}{Video} object. 
+\end{DoxyReturn}
+\Hypertarget{classMediaManager_ac4762b7961e234d68670c16874479a6e}\label{classMediaManager_ac4762b7961e234d68670c16874479a6e} 
+\index{MediaManager@{MediaManager}!displayGroup@{displayGroup}}
+\index{displayGroup@{displayGroup}!MediaManager@{MediaManager}}
+\doxysubsubsection{\texorpdfstring{displayGroup()}{displayGroup()}}
+{\footnotesize\ttfamily void Media\+Manager\+::display\+Group (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Displays information about a group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the group. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMediaManager_ad9baab63594c8d302f1927a5e7ec83e8}\label{classMediaManager_ad9baab63594c8d302f1927a5e7ec83e8} 
+\index{MediaManager@{MediaManager}!displayMedia@{displayMedia}}
+\index{displayMedia@{displayMedia}!MediaManager@{MediaManager}}
+\doxysubsubsection{\texorpdfstring{displayMedia()}{displayMedia()}}
+{\footnotesize\ttfamily void Media\+Manager\+::display\+Media (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Displays information about a multimedia object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the multimedia object. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMediaManager_a1528021e3f9205c34b28cafbd512c016}\label{classMediaManager_a1528021e3f9205c34b28cafbd512c016} 
+\index{MediaManager@{MediaManager}!getGroup@{getGroup}}
+\index{getGroup@{getGroup}!MediaManager@{MediaManager}}
+\doxysubsubsection{\texorpdfstring{getGroup()}{getGroup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{MediaManager_8h_a1938586896c27552375faeedfd692720}{Group\+Ptr}} Media\+Manager\+::get\+Group (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves a group by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the group. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the group, or nullptr if not found. 
+\end{DoxyReturn}
+\Hypertarget{classMediaManager_a720a63878f5b983df19a489065ef3e02}\label{classMediaManager_a720a63878f5b983df19a489065ef3e02} 
+\index{MediaManager@{MediaManager}!getGroupTable@{getGroupTable}}
+\index{getGroupTable@{getGroupTable}!MediaManager@{MediaManager}}
+\doxysubsubsection{\texorpdfstring{getGroupTable()}{getGroupTable()}}
+{\footnotesize\ttfamily const std\+::map$<$ std\+::string, \mbox{\hyperlink{MediaManager_8h_a1938586896c27552375faeedfd692720}{Group\+Ptr}} $>$ \& Media\+Manager\+::get\+Group\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the group table. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the map of groups. 
+\end{DoxyReturn}
+\Hypertarget{classMediaManager_a67c23c1ca3362ee52828500e05b2b130}\label{classMediaManager_a67c23c1ca3362ee52828500e05b2b130} 
+\index{MediaManager@{MediaManager}!getMedia@{getMedia}}
+\index{getMedia@{getMedia}!MediaManager@{MediaManager}}
+\doxysubsubsection{\texorpdfstring{getMedia()}{getMedia()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{MediaManager_8h_aa114ead9712a117a8cbd0bb7e3ffde39}{Multimidia\+Ptr}} Media\+Manager\+::get\+Media (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves a multimedia object by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the multimedia object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the multimedia object, or nullptr if not found. 
+\end{DoxyReturn}
+\Hypertarget{classMediaManager_a6a8d09fe541a2b4da22ede54ec32f507}\label{classMediaManager_a6a8d09fe541a2b4da22ede54ec32f507} 
+\index{MediaManager@{MediaManager}!getMediaTable@{getMediaTable}}
+\index{getMediaTable@{getMediaTable}!MediaManager@{MediaManager}}
+\doxysubsubsection{\texorpdfstring{getMediaTable()}{getMediaTable()}}
+{\footnotesize\ttfamily const std\+::map$<$ std\+::string, \mbox{\hyperlink{MediaManager_8h_aa114ead9712a117a8cbd0bb7e3ffde39}{Multimidia\+Ptr}} $>$ \& Media\+Manager\+::get\+Media\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the media table. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the map of multimedia objects. 
+\end{DoxyReturn}
+\Hypertarget{classMediaManager_ae7fea2d1bb442996a7922f7ed173b788}\label{classMediaManager_ae7fea2d1bb442996a7922f7ed173b788} 
+\index{MediaManager@{MediaManager}!load@{load}}
+\index{load@{load}!MediaManager@{MediaManager}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Media\+Manager\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Loads media data from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to load from. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMediaManager_a39f9b36371ad9f7f82104770185f6e61}\label{classMediaManager_a39f9b36371ad9f7f82104770185f6e61} 
+\index{MediaManager@{MediaManager}!playMedia@{playMedia}}
+\index{playMedia@{playMedia}!MediaManager@{MediaManager}}
+\doxysubsubsection{\texorpdfstring{playMedia()}{playMedia()}}
+{\footnotesize\ttfamily void Media\+Manager\+::play\+Media (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Plays a multimedia object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the multimedia object. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMediaManager_a787ffbfe62bb8980608ebd4a126fef5c}\label{classMediaManager_a787ffbfe62bb8980608ebd4a126fef5c} 
+\index{MediaManager@{MediaManager}!removeGroup@{removeGroup}}
+\index{removeGroup@{removeGroup}!MediaManager@{MediaManager}}
+\doxysubsubsection{\texorpdfstring{removeGroup()}{removeGroup()}}
+{\footnotesize\ttfamily void Media\+Manager\+::remove\+Group (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes a group from the group table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the group to remove. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMediaManager_ac23d89e2ddc202d42c11cdba48e7d565}\label{classMediaManager_ac23d89e2ddc202d42c11cdba48e7d565} 
+\index{MediaManager@{MediaManager}!removeMedia@{removeMedia}}
+\index{removeMedia@{removeMedia}!MediaManager@{MediaManager}}
+\doxysubsubsection{\texorpdfstring{removeMedia()}{removeMedia()}}
+{\footnotesize\ttfamily void Media\+Manager\+::remove\+Media (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes a multimedia object from the media table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the multimedia object to remove. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMediaManager_a7feb9eed20c90b52cfa847f19d9380f5}\label{classMediaManager_a7feb9eed20c90b52cfa847f19d9380f5} 
+\index{MediaManager@{MediaManager}!save@{save}}
+\index{save@{save}!MediaManager@{MediaManager}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void Media\+Manager\+::save (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Saves the media data to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to save to. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp/\mbox{\hyperlink{MediaManager_8h}{Media\+Manager.\+h}}\end{DoxyCompactItemize}

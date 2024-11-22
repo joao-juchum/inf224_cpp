@@ -1,0 +1,52 @@
+\doxysection{cpp/client.cpp File Reference}
+\hypertarget{client_8cpp}{}\label{client_8cpp}\index{cpp/client.cpp@{cpp/client.cpp}}
+
+
+C++ Client to communicate with a TCP server.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include "{}ccsocket.\+h"{}}\newline
+Include dependency graph for client.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{client_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{client_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+C++ Client to communicate with a TCP server. 
+
+Reads a request from the terminal, sends it to the server, receives the response, and displays it on the terminal. Note that the program blocks if the server does not respond.
+
+\begin{DoxyAuthor}{Author}
+Eric Lecolinet -\/ Telecom Paris\+Tech -\/ 2016/2020 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{client_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{client_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{client.cpp@{client.cpp}!main@{main}}
+\index{main@{main}!client.cpp@{client.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main function. 
+
+Establishes a connection to the server and enters a loop to send requests and receive responses. Exits when the user inputs "{}quit"{}.
+
+\begin{DoxyReturn}{Returns}
+Exit status code. 
+\end{DoxyReturn}

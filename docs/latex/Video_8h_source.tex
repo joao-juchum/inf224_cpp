@@ -1,0 +1,59 @@
+\doxysection{Video.\+h}
+\hypertarget{Video_8h_source}{}\label{Video_8h_source}\index{cpp/Video.h@{cpp/Video.h}}
+\mbox{\hyperlink{Video_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ VIDEO\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ VIDEO\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Multimidia_8h}{Multimidia.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVideo}{Video}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMultimidia}{Multimidia}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ name;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ std::string\ filePath;\ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ duration;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classVideo_a71ad8129b38b1e887d86b0ff215d9663}{Video}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keyword}{const}\ std::string\&\ filePath,\ \textcolor{keywordtype}{int}\ duration)}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classMultimidia}{Multimidia}}(name,\ filePath),\ duration(duration)\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Video\ object\ "{}}\ <<\ \mbox{\hyperlink{classMultimidia_af9ae80c98807b9e706b6c546dc13a869}{getName}}()\ <<\ \textcolor{stringliteral}{"{}\ created\(\backslash\)n"{}};}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classVideo_a57f903f1d582ac6ef88922c7a6cb8f7f}{getDuration}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ duration;\ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVideo_aca0f92f98c7b6377aaa23af1645b8172}{setDuration}}(\textcolor{keywordtype}{int}\ duration)\ \{\ this-\/>duration\ =\ duration;\ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVideo_a7d927fbf8bc9864105abde6a9a94ead3}{display}}(std::ostream\&\ os)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMultimidia_ab33b198209fba18a4f55c459c156611f}{Multimidia::display}}(os);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}Duration:\ "{}}\ <<\ duration\ <<\ \textcolor{stringliteral}{"{}\ seconds"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVideo_a89e11497f4f200f387805b10bd42922d}{play}}()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ std::string\ command\ =\ \textcolor{stringliteral}{"{}mpv\ "{}}\ +\ \mbox{\hyperlink{classMultimidia_a379e6378680e985e0288701a750dab1c}{Multimidia::getFilePath}}()\ +\ \textcolor{stringliteral}{"{}\ \&"{}};}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ system(command.data());}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVideo_a567dfef804a5be5d76f25ab8105a253d}{save}}(std::ofstream\&\ ofs)\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ ofs\ <<\ \mbox{\hyperlink{classVideo_a1dcd090b6854b30bf9f2f233dc0faff7}{getClassName}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ <<\ name\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ <<\ filePath\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ <<\ duration\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVideo_a93acb3ca60e4a34a93eb786d512201ef}{load}}(std::ifstream\&\ ifs)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ std::getline(ifs,\ name);}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ std::getline(ifs,\ filePath);}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ ifs\ >>\ duration;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ ifs.ignore();}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00097\ \ \ \ \ std::string\ \mbox{\hyperlink{classVideo_a1dcd090b6854b30bf9f2f233dc0faff7}{getClassName}}()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Video"{}};}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ \ \ \ \ \mbox{\hyperlink{classVideo_aebf7e2a8fa2bbd79335b1cf35925d190}{\string~Video}}()\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Video\ object\ "{}}\ <<\ \mbox{\hyperlink{classMultimidia_af9ae80c98807b9e706b6c546dc13a869}{getName}}()\ <<\ \textcolor{stringliteral}{"{}\ destroyed\(\backslash\)n"{}};}
+\DoxyCodeLine{00108\ \ \ \ \ \}}
+\DoxyCodeLine{00109\ \};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ VIDEO\_H}}
+
+\end{DoxyCode}

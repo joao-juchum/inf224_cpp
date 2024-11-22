@@ -1,0 +1,12 @@
+<map id="SocketCnx" name="SocketCnx">
+<area shape="rect" id="Node000001" title="Manages the connection with a given client using a separate thread." alt="" coords="96,181,187,207"/>
+<area shape="rect" id="Node000002" href="$classTCPServer.html" title="TCP/IP IPv4 server class." alt="" coords="5,93,93,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="57,131,71,156,88,169,107,179,105,184,85,173,67,159,53,133"/>
+<area shape="rect" id="Node000003" href="$classSocket.html" title="TCP/IP or UDP/Datagram IPv4 socket." alt="" coords="115,5,181,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="150,44,144,181,139,181,144,44"/>
+<area shape="rect" id="Node000004" href="$classSocketBuffer.html" title="Preserves record boundaries when exchanging messages between connected TCP/IP sockets." alt="" coords="207,93,311,119"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="175,37,214,67,245,91,242,95,210,71,172,41"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="233,129,159,183,156,179,230,125"/>
+<area shape="rect" id="Node000005" href="$structInputBuffer.html" title=" " alt="" coords="211,5,306,31"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="261,45,261,93,256,93,256,45"/>
+</map>

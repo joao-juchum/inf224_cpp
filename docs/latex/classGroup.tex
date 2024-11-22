@@ -1,0 +1,99 @@
+\doxysection{Group Class Reference}
+\hypertarget{classGroup}{}\label{classGroup}\index{Group@{Group}}
+
+
+Represents a group of multimedia objects.  
+
+
+
+
+{\ttfamily \#include $<$group.\+h$>$}
+
+
+
+Inheritance diagram for Group\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classGroup__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Group\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classGroup__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGroup_a10fc62dd92115677976891017a943e00}{Group}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Constructor that initializes the group with a name. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classGroup_a2441b4048116108fe8f65bdf71d02494}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGroup_a661faafa833aa92388499c5f43d34dfa}{display}} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em Displays the group\textquotesingle{}s information and its multimedia items. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a group of multimedia objects. 
+
+The \doxylink{classGroup}{Group} class inherits from {\ttfamily std\+::list} of shared pointers to {\ttfamily \doxylink{classMultimidia}{Multimidia}} objects. It allows grouping multiple multimedia objects and provides methods to interact with them. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGroup_a10fc62dd92115677976891017a943e00}\label{classGroup_a10fc62dd92115677976891017a943e00} 
+\index{Group@{Group}!Group@{Group}}
+\index{Group@{Group}!Group@{Group}}
+\doxysubsubsection{\texorpdfstring{Group()}{Group()}}
+{\footnotesize\ttfamily Group\+::\+Group (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor that initializes the group with a name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the group. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGroup_a661faafa833aa92388499c5f43d34dfa}\label{classGroup_a661faafa833aa92388499c5f43d34dfa} 
+\index{Group@{Group}!display@{display}}
+\index{display@{display}!Group@{Group}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Group\+::display (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Displays the group\textquotesingle{}s information and its multimedia items. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to display to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classGroup_a2441b4048116108fe8f65bdf71d02494}\label{classGroup_a2441b4048116108fe8f65bdf71d02494} 
+\index{Group@{Group}!getName@{getName}}
+\index{getName@{getName}!Group@{Group}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Group\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the name of the group. 
+
+\begin{DoxyReturn}{Returns}
+The name of the group. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp/\mbox{\hyperlink{group_8h}{group.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+<map id="Multimidia" name="Multimidia">
+<area shape="rect" id="Node000001" title="Abstract base class representing a multimedia object." alt="" coords="30,5,122,31"/>
+<area shape="rect" id="Node000002" href="$classPhoto.html" title="Represents a photo with geolocation data." alt="" coords="5,79,64,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,44,44,80,39,77,60,41"/>
+<area shape="rect" id="Node000003" href="$classVideo.html" title="Represents a video with a duration." alt="" coords="88,79,147,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="92,41,113,77,108,80,87,44"/>
+<area shape="rect" id="Node000004" href="$classFilm.html" title="Represents a film with multiple chapters." alt="" coords="92,152,143,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="120,118,120,152,115,152,115,118"/>
+</map>

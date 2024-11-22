@@ -1,0 +1,244 @@
+\doxysection{Multimidia Class Reference}
+\hypertarget{classMultimidia}{}\label{classMultimidia}\index{Multimidia@{Multimidia}}
+
+
+Abstract base class representing a multimedia object.  
+
+
+
+
+{\ttfamily \#include $<$Multimidia.\+h$>$}
+
+
+
+Inheritance diagram for Multimidia\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classMultimidia__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMultimidia_a2cb6e667880847d7c33d36466cc766c1}{Multimidia}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMultimidia_ab448ed2781af524d9c6bb80a420aafc3}{Multimidia}} (const std\+::string \&name, const std\+::string \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Constructor with parameters. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classMultimidia_ac1962b12f51062b874dae8e16aea901c}{\texorpdfstring{$\sim$}{\string~}\+Multimidia}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classMultimidia_af9ae80c98807b9e706b6c546dc13a869}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the multimedia object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classMultimidia_a379e6378680e985e0288701a750dab1c}{get\+File\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Gets the file path of the multimedia object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMultimidia_aba4216725075b7e7442fe5b2d1c1df5a}{set\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the multimedia object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMultimidia_adf6c54ee2b7cf4804b6831029e99bad5}{set\+File\+Path}} (const std\+::string \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Sets the file path of the multimedia object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMultimidia_ab33b198209fba18a4f55c459c156611f}{display}} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em Displays the multimedia object\textquotesingle{}s information. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classMultimidia_adaeef7e4127c1c7d803ca702263dcb50}{play}} () const =0
+\begin{DoxyCompactList}\small\item\em Pure virtual method to play the multimedia object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classMultimidia_a3e293f4247e201865e80a914234493bb}{save}} (std\+::ofstream \&os) const =0
+\begin{DoxyCompactList}\small\item\em Pure virtual method to save the multimedia object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classMultimidia_a00a2effb9af4fce67882a8d3aa1da33c}{load}} (std\+::ifstream \&is)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual method to load the multimedia object. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classMultimidia_a0a467cd3d8a77c7699c0fe7a5042e567}{get\+Class\+Name}} () const =0
+\begin{DoxyCompactList}\small\item\em Pure virtual method to get the class name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class representing a multimedia object. 
+
+The \doxylink{classMultimidia}{Multimidia} class serves as an abstract base class for different types of multimedia objects, such as photos, videos, and films. It provides common attributes and methods that can be overridden by derived classes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMultimidia_a2cb6e667880847d7c33d36466cc766c1}\label{classMultimidia_a2cb6e667880847d7c33d36466cc766c1} 
+\index{Multimidia@{Multimidia}!Multimidia@{Multimidia}}
+\index{Multimidia@{Multimidia}!Multimidia@{Multimidia}}
+\doxysubsubsection{\texorpdfstring{Multimidia()}{Multimidia()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Multimidia\+::\+Multimidia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Initializes the multimedia object with default values. \Hypertarget{classMultimidia_ab448ed2781af524d9c6bb80a420aafc3}\label{classMultimidia_ab448ed2781af524d9c6bb80a420aafc3} 
+\index{Multimidia@{Multimidia}!Multimidia@{Multimidia}}
+\index{Multimidia@{Multimidia}!Multimidia@{Multimidia}}
+\doxysubsubsection{\texorpdfstring{Multimidia()}{Multimidia()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Multimidia\+::\+Multimidia (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})}
+
+
+
+Constructor with parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the multimedia object. \\
+\hline
+{\em file\+Path} & The file path of the multimedia object. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMultimidia_ac1962b12f51062b874dae8e16aea901c}\label{classMultimidia_ac1962b12f51062b874dae8e16aea901c} 
+\index{Multimidia@{Multimidia}!````~Multimidia@{\texorpdfstring{$\sim$}{\string~}Multimidia}}
+\index{````~Multimidia@{\texorpdfstring{$\sim$}{\string~}Multimidia}!Multimidia@{Multimidia}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Multimidia()}{\string~Multimidia()}}
+{\footnotesize\ttfamily Multimidia\+::\texorpdfstring{$\sim$}{\string~}\+Multimidia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual destructor. 
+
+Destructor.
+
+Ensures proper cleanup of derived classes. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMultimidia_ab33b198209fba18a4f55c459c156611f}\label{classMultimidia_ab33b198209fba18a4f55c459c156611f} 
+\index{Multimidia@{Multimidia}!display@{display}}
+\index{display@{display}!Multimidia@{Multimidia}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Multimidia\+::display (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Displays the multimedia object\textquotesingle{}s information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to display to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMultimidia_a0a467cd3d8a77c7699c0fe7a5042e567}\label{classMultimidia_a0a467cd3d8a77c7699c0fe7a5042e567} 
+\index{Multimidia@{Multimidia}!getClassName@{getClassName}}
+\index{getClassName@{getClassName}!Multimidia@{Multimidia}}
+\doxysubsubsection{\texorpdfstring{getClassName()}{getClassName()}}
+{\footnotesize\ttfamily virtual std\+::string Multimidia\+::get\+Class\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual method to get the class name. 
+
+Must be overridden by derived classes to return the class name as a string. \begin{DoxyReturn}{Returns}
+The class name as a string. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classFilm_a5d1cfd8484d03b7df2c430f8e37f1d08}{Film}}, \mbox{\hyperlink{classPhoto_a2199b058723d50a474a03f4a937ff83e}{Photo}}, and \mbox{\hyperlink{classVideo_a1dcd090b6854b30bf9f2f233dc0faff7}{Video}}.
+
+\Hypertarget{classMultimidia_a379e6378680e985e0288701a750dab1c}\label{classMultimidia_a379e6378680e985e0288701a750dab1c} 
+\index{Multimidia@{Multimidia}!getFilePath@{getFilePath}}
+\index{getFilePath@{getFilePath}!Multimidia@{Multimidia}}
+\doxysubsubsection{\texorpdfstring{getFilePath()}{getFilePath()}}
+{\footnotesize\ttfamily std\+::string Multimidia\+::get\+File\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the file path of the multimedia object. 
+
+\begin{DoxyReturn}{Returns}
+The file path as a string. 
+\end{DoxyReturn}
+\Hypertarget{classMultimidia_af9ae80c98807b9e706b6c546dc13a869}\label{classMultimidia_af9ae80c98807b9e706b6c546dc13a869} 
+\index{Multimidia@{Multimidia}!getName@{getName}}
+\index{getName@{getName}!Multimidia@{Multimidia}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Multimidia\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the multimedia object. 
+
+\begin{DoxyReturn}{Returns}
+The name as a string. 
+\end{DoxyReturn}
+\Hypertarget{classMultimidia_a00a2effb9af4fce67882a8d3aa1da33c}\label{classMultimidia_a00a2effb9af4fce67882a8d3aa1da33c} 
+\index{Multimidia@{Multimidia}!load@{load}}
+\index{load@{load}!Multimidia@{Multimidia}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily virtual void Multimidia\+::load (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{is }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual method to load the multimedia object. 
+
+Must be overridden by derived classes to implement specific load functionality. 
+\begin{DoxyParams}{Parameters}
+{\em is} & The input file stream to load from. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classFilm_a8b11631b279b94be03e729db82573d2a}{Film}}, \mbox{\hyperlink{classPhoto_af6e242b35e61923a9340d92d989dfc2c}{Photo}}, and \mbox{\hyperlink{classVideo_a93acb3ca60e4a34a93eb786d512201ef}{Video}}.
+
+\Hypertarget{classMultimidia_adaeef7e4127c1c7d803ca702263dcb50}\label{classMultimidia_adaeef7e4127c1c7d803ca702263dcb50} 
+\index{Multimidia@{Multimidia}!play@{play}}
+\index{play@{play}!Multimidia@{Multimidia}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily virtual void Multimidia\+::play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual method to play the multimedia object. 
+
+Must be overridden by derived classes to implement specific play functionality. 
+
+Implemented in \mbox{\hyperlink{classPhoto_a98b55224b5f9bd016cb08aa2e9a64e46}{Photo}}, and \mbox{\hyperlink{classVideo_a89e11497f4f200f387805b10bd42922d}{Video}}.
+
+\Hypertarget{classMultimidia_a3e293f4247e201865e80a914234493bb}\label{classMultimidia_a3e293f4247e201865e80a914234493bb} 
+\index{Multimidia@{Multimidia}!save@{save}}
+\index{save@{save}!Multimidia@{Multimidia}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily virtual void Multimidia\+::save (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual method to save the multimedia object. 
+
+Must be overridden by derived classes to implement specific save functionality. 
+\begin{DoxyParams}{Parameters}
+{\em os} & The output file stream to save to. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classFilm_a1dff78fd9c34efa32f799082487a1c35}{Film}}, \mbox{\hyperlink{classPhoto_afcb2b10f9939dc337a79ae1491d4b8a1}{Photo}}, and \mbox{\hyperlink{classVideo_a567dfef804a5be5d76f25ab8105a253d}{Video}}.
+
+\Hypertarget{classMultimidia_adf6c54ee2b7cf4804b6831029e99bad5}\label{classMultimidia_adf6c54ee2b7cf4804b6831029e99bad5} 
+\index{Multimidia@{Multimidia}!setFilePath@{setFilePath}}
+\index{setFilePath@{setFilePath}!Multimidia@{Multimidia}}
+\doxysubsubsection{\texorpdfstring{setFilePath()}{setFilePath()}}
+{\footnotesize\ttfamily void Multimidia\+::set\+File\+Path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})}
+
+
+
+Sets the file path of the multimedia object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & The new file path to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMultimidia_aba4216725075b7e7442fe5b2d1c1df5a}\label{classMultimidia_aba4216725075b7e7442fe5b2d1c1df5a} 
+\index{Multimidia@{Multimidia}!setName@{setName}}
+\index{setName@{setName}!Multimidia@{Multimidia}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void Multimidia\+::set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Sets the name of the multimedia object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The new name to set. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cpp/\mbox{\hyperlink{Multimidia_8h}{Multimidia.\+h}}\item 
+cpp/\mbox{\hyperlink{Multimidia_8cpp}{Multimidia.\+cpp}}\end{DoxyCompactItemize}

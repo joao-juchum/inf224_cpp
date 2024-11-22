@@ -1,0 +1,73 @@
+\doxysection{cpp/server.cpp File Reference}
+\hypertarget{server_8cpp}{}\label{server_8cpp}\index{cpp/server.cpp@{cpp/server.cpp}}
+
+
+Main server program using \doxylink{classMediaManager}{Media\+Manager} and \doxylink{classTCPServer}{TCPServer}.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include "{}Media\+Manager.\+h"{}}\newline
+{\ttfamily \#include "{}tcpserver.\+h"{}}\newline
+Include dependency graph for server.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{server_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{server_8cpp_a11717c934f77ad5167dac5d28562d85a}{PORT}} = 3331
+\begin{DoxyCompactList}\small\item\em The port number on which the server will listen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main server program using \doxylink{classMediaManager}{Media\+Manager} and \doxylink{classTCPServer}{TCPServer}. 
+
+This program initializes a \doxylink{classMediaManager}{Media\+Manager} with some multimedia objects, sets up a TCP server, and handles client requests to search, play, and list media. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{server_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{server_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+\index{server.cpp@{server.cpp}!main@{main}}
+\index{main@{main}!server.cpp@{server.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Main function. 
+
+Initializes the \doxylink{classMediaManager}{Media\+Manager}, creates some media objects, sets up the TCP server, and defines the request handling logic.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & The number of command-\/line arguments. \\
+\hline
+{\em argv} & The array of command-\/line arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Exit status code. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{server_8cpp_a11717c934f77ad5167dac5d28562d85a}\label{server_8cpp_a11717c934f77ad5167dac5d28562d85a} 
+\index{server.cpp@{server.cpp}!PORT@{PORT}}
+\index{PORT@{PORT}!server.cpp@{server.cpp}}
+\doxysubsubsection{\texorpdfstring{PORT}{PORT}}
+{\footnotesize\ttfamily const int PORT = 3331}
+
+
+
+The port number on which the server will listen. 
+

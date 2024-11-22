@@ -1,0 +1,28 @@
+<map id="cpp/Multimidia.h" name="cpp/Multimidia.h">
+<area shape="rect" id="Node000001" title="Declaration of the Multimidia class." alt="" coords="279,5,410,31"/>
+<area shape="rect" id="Node000002" href="$MediaManager_8h.html" title="Declaration of the MediaManager class." alt="" coords="76,225,234,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="266,27,200,40,129,62,95,79,64,99,36,124,13,153,9,166,10,177,16,187,27,196,58,212,95,223,93,228,56,217,24,201,12,191,5,179,3,165,9,151,32,120,60,95,92,74,127,57,199,34,265,22"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html" title="Main program to test multimedia functionalities." alt="" coords="252,299,362,324"/>
+<area shape="poly" id="edge17_Node000001_Node000003" title=" " alt="" coords="380,36,417,61,453,95,467,114,476,135,478,156,472,178,444,221,406,255,367,282,334,301,331,296,364,278,403,251,440,217,467,176,473,156,471,136,462,117,449,98,414,65,377,40"/>
+<area shape="rect" id="Node000005" href="$Multimidia_8cpp.html" title="Implementation of the Multimidia class methods." alt="" coords="532,79,679,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="400,32,564,76,563,81,399,37"/>
+<area shape="rect" id="Node000006" href="$Photo_8h.html" title=" " alt="" coords="23,152,122,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="300,38,251,57,200,81,137,119,89,154,86,150,134,115,198,76,249,52,298,33"/>
+<area shape="rect" id="Node000007" href="$Video_8h.html" title=" " alt="" coords="211,79,310,104"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="322,42,276,80,272,76,319,38"/>
+<area shape="rect" id="Node000009" href="$group_8h.html" title="Declaration of the Group class." alt="" coords="359,152,458,177"/>
+<area shape="poly" id="edge14_Node000001_Node000009" title=" " alt="" coords="358,42,406,151,401,153,353,44"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="193,254,283,296,281,301,190,259"/>
+<area shape="rect" id="Node000004" href="$server_8cpp.html" title="Main server program using MediaManager and TCPServer." alt="" coords="97,299,213,324"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="158,264,158,299,152,299,152,264"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="98,184,143,223,140,227,94,188"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="64,191,58,221,60,236,66,249,90,260,138,274,252,298,251,303,136,279,88,265,63,253,55,237,53,221,59,190"/>
+<area shape="poly" id="edge9_Node000007_Node000002" title=" " alt="" coords="230,114,207,131,187,153,168,192,159,226,154,225,163,190,182,151,203,128,227,109"/>
+<area shape="poly" id="edge13_Node000007_Node000003" title=" " alt="" coords="279,114,298,151,307,193,311,235,311,299,305,299,306,235,302,194,293,153,275,117"/>
+<area shape="rect" id="Node000008" href="$film_8h.html" title="Declaration of the Film class, representing a film with chapters." alt="" coords="197,152,284,177"/>
+<area shape="poly" id="edge10_Node000007_Node000008" title=" " alt="" coords="256,118,246,153,241,151,251,117"/>
+<area shape="poly" id="edge11_Node000008_Node000002" title=" " alt="" coords="218,188,171,227,167,223,215,184"/>
+<area shape="poly" id="edge12_Node000008_Node000003" title=" " alt="" coords="254,189,304,297,299,300,249,191"/>
+<area shape="poly" id="edge15_Node000009_Node000002" title=" " alt="" coords="355,184,197,228,195,223,354,179"/>
+<area shape="poly" id="edge16_Node000009_Node000003" title=" " alt="" coords="395,190,317,300,313,297,390,187"/>
+</map>

@@ -1,0 +1,50 @@
+\doxysection{Multimidia.\+h}
+\hypertarget{Multimidia_8h_source}{}\label{Multimidia_8h_source}\index{cpp/Multimidia.h@{cpp/Multimidia.h}}
+\mbox{\hyperlink{Multimidia_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ MULTIMIDIA\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ MULTIMIDIA\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMultimidia}{Multimidia}}\{}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ std::string\ name;\ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::string\ filePath;\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMultimidia_a2cb6e667880847d7c33d36466cc766c1}{Multimidia}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMultimidia_a2cb6e667880847d7c33d36466cc766c1}{Multimidia}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keyword}{const}\ std::string\&\ filePath);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classMultimidia_ac1962b12f51062b874dae8e16aea901c}{\string~Multimidia}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classMultimidia_af9ae80c98807b9e706b6c546dc13a869}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classMultimidia_a379e6378680e985e0288701a750dab1c}{getFilePath}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMultimidia_aba4216725075b7e7442fe5b2d1c1df5a}{setName}}(\textcolor{keyword}{const}\ std::string\&\ name);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMultimidia_adf6c54ee2b7cf4804b6831029e99bad5}{setFilePath}}(\textcolor{keyword}{const}\ std::string\&\ filePath);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMultimidia_ab33b198209fba18a4f55c459c156611f}{display}}(std::ostream\&\ os)\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}Name:\ "{}}\ <<\ name\ <<\ \textcolor{stringliteral}{"{},\ File\ Path:\ "{}}\ <<\ filePath\ <<\ std::endl;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMultimidia_adaeef7e4127c1c7d803ca702263dcb50}{play}}()\ \textcolor{keyword}{const}\ =\ 0;\ \textcolor{comment}{//\ Pure\ virtual\ function}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMultimidia_a3e293f4247e201865e80a914234493bb}{save}}(std::ofstream\&\ os)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMultimidia_a00a2effb9af4fce67882a8d3aa1da33c}{load}}(std::ifstream\&\ is)\ =\ 0;}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{classMultimidia_a0a467cd3d8a77c7699c0fe7a5042e567}{getClassName}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MULTIMIDIA\_H}}
+
+\end{DoxyCode}
