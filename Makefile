@@ -14,7 +14,7 @@ JAVA = java
 
 # Directories
 CPP_DIR = cpp
-JAVA_DIR = Swing
+JAVA_DIR = swing
 
 # C++ source files
 CPP_SOURCES = $(CPP_DIR)/ccsocket.cpp \
