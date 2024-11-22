@@ -1,25 +1,33 @@
+/**
+ * MainWindow class for the Media Center client.
+ *
+ * <p>
+ * This class creates the GUI for the Media Center client application.
+ * It provides a window with menu and toolbar options to interact with the server,
+ * such as playing media, listing media, listing groups, and displaying help information.
+ * </p>
+ *
+ * @author
+ */
 import java.awt.*;
 import java.io.*;
 import java.net.*;
 import javax.swing.*;
 
-/**
- * MainWindow class for the Media Center client.
- */
 public class MainWindow extends JFrame {
 
     private static final long serialVersionUID = 1L;
 
-    // Default server details
+    /** Default server details */
     static String DEFAULT_HOST = "localhost";
     static int DEFAULT_PORT = 3331;
     static String host = DEFAULT_HOST;
     static int port = DEFAULT_PORT;
 
-    // Client connection
+    /** Client connection */
     static Client client = null;
 
-    // UI components
+    /** UI components */
     static JTextArea textZone;
 
     /**
@@ -116,6 +124,10 @@ public class MainWindow extends JFrame {
 
     // Action handlers
 
+    /**
+     * Handles the "Play Media" action.
+     * Prompts the user for the media name and sends a play request to the server.
+     */
     private void handlePlayMedia() {
         String mediaName = JOptionPane.showInputDialog(this, "Enter the name of the media to play:");
         if (mediaName == null || mediaName.trim().isEmpty()) {
@@ -127,38 +139,70 @@ public class MainWindow extends JFrame {
         textZone.append("Server Response:\n" + response + "\n");
     }
 
+    /**
+     * Handles the "List Media" action.
+     * Sends a request to list all media and displays the response.
+     */
     private void handleListMedia() {
         String response = client.send("listMedia");
         textZone.append("Server Response:\n" + response + "\n");
     }
 
+    /**
+     * Handles the "List Groups" action.
+     * Sends a request to list all groups and displays the response.
+     */
     private void handleListGroups() {
         String response = client.send("listGroups");
         textZone.append("Server Response:\n" + response + "\n");
     }
 
+    /**
+     * Handles the "Help" action.
+     * Sends a help request to the server and displays the response.
+     */
     private void handleHelp() {
         String response = client.send("help");
         textZone.append("Server Response:\n" + response + "\n");
     }
 
-    // New action handler for Clear Text
+    /**
+     * Handles the "Clear Text" action.
+     * Clears the text area.
+     */
     private void handleClearText() {
         textZone.setText("");
     }
 
     // Client class for server communication
+
+    /**
+     * Inner Client class to handle server communication.
+     */
     private static class Client {
         private Socket socket;
         private BufferedReader input;
         private BufferedWriter output;
 
+        /**
+         * Constructs a Client object and establishes a connection to the server.
+         *
+         * @param host The server's hostname.
+         * @param port The server's port number.
+         * @throws IOException If an I/O error occurs when creating the socket.
+         */
         public Client(String host, int port) throws IOException {
             socket = new Socket(host, port);
             input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             output = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
         }
 
+        /**
+         * Sends a request to the server and returns the response.
+         *
+         * @param request The request string to send.
+         * @return The server's response.
+         */
         public String send(String request) {
             try {
                 output.write(request + "\n");
@@ -181,9 +225,16 @@ public class MainWindow extends JFrame {
         }
     }
 
+    /**
+     * Main method to start the application.
+     *
+     * @param args Command-line arguments for host and port.
+     */
     public static void main(String[] args) {
-        if (args.length > 0) host = args[0];
-        if (args.length > 1) port = Integer.parseInt(args[1]);
+        if (args.length > 0)
+            host = args[0];
+        if (args.length > 1)
+            port = Integer.parseInt(args[1]);
 
         try {
             client = new Client(host, port);

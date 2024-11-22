@@ -9,12 +9,12 @@
 #
 # Nom du programme (doit correspondre au fichier qui contient main())
 #
-PROG = main_window
+PROG = MainWindow
 
 #
 # Fichiers sources .java
 #
-SOURCES = main_window.java 
+SOURCES = MainWindow.java Client.java
 
 #
 # Compilateur Java
@@ -24,7 +24,7 @@ JC = javac
 #
 # Options du compilateur Java
 #
-JFLAGS = -g
+JFLAGS = 
 
 
 ##########################################

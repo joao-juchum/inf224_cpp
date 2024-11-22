@@ -7,7 +7,16 @@ import java.io.*;
 import java.net.*;
 
 /**
+ * <p>
  * Client class to communicate with a server using sockets.
+ * </p>
+ *
+ * <p>
+ * This client connects to a server using TCP sockets, sends requests entered by the user,
+ * and displays the server's responses.
+ * </p>
+ * 
+ * @author Eric Lecolinet - Telecom ParisTech - 2015
  */
 public class Client {
     private static final long serialVersionUID = 1L;
@@ -29,14 +38,16 @@ public class Client {
 
     /**
      * Main program to interact with the server via the console.
-     * 
+     *
      * @param argv Command-line arguments (optional host and port).
      */
     public static void main(String argv[]) {
         String host = DEFAULT_HOST;
         int port = DEFAULT_PORT;
-        if (argv.length >= 1) host = argv[0];
-        if (argv.length >= 2) port = Integer.parseInt(argv[1]);
+        if (argv.length >= 1)
+            host = argv[0];
+        if (argv.length >= 2)
+            port = Integer.parseInt(argv[1]);
 
         Client client = null;
 
@@ -67,11 +78,11 @@ public class Client {
 
     /**
      * Initializes the connection to the server.
-     * 
+     *
      * @param host The server address.
      * @param port The server port.
      * @throws UnknownHostException If the server cannot be found.
-     * @throws IOException If an I/O error occurs.
+     * @throws IOException          If an I/O error occurs.
      */
     public Client(String host, int port) throws UnknownHostException, IOException {
         try {
@@ -95,7 +106,7 @@ public class Client {
 
     /**
      * Sends a request to the server and returns its full response.
-     * 
+     *
      * @param request The request to send.
      * @return The server's response, or an error message if an exception occurs.
      */

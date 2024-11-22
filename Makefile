@@ -13,7 +13,7 @@ JAVAC = javac
 JAVA = java
 
 # Directories
-CPP_DIR = SourcesCpp
+CPP_DIR = cpp
 JAVA_DIR = Swing
 
 # C++ source files
