@@ -1,100 +1,77 @@
-##########################################
-#
-#  Exemple de Makefile
-#  Eric Lecolinet - Reda Dehak - Telecom ParisTech 2015
-#  INF224 - TP C++ - http://www.telecom-paristech.fr/~elc/inf224
-#
-##########################################
+# Makefile for compiling and running the Media Center application
 
-#
-# Nom du programme
-#
-PROG = myprog
+# Compiler for C++
+CXX = g++
 
-#
-# Fichiers sources (NE PAS METTRE les .h ni les .o seulement les .cpp)
-#
-SOURCES = Multimidia.cpp main.cpp
+# Compiler flags
+CXXFLAGS = -Wall -g -std=c++11
 
-#
-# Fichiers objets (ne pas modifier sauf si l'extension n'est pas .cpp)
-#
-OBJETS = ${SOURCES:%.cpp=%.o}
+# Java compiler
+JAVAC = javac
 
-#
-# Compilateur C++
-#
-CXX = c++
+# Java execution command
+JAVA = java
 
-#
-# Options du compilateur C++
-#   -g pour debugger, -O optimise, -Wall affiche les erreurs, -I pour les headers
-#   -std=c++11 pour C++11
-# Exemple: CXXFLAGS= -std=c++11 -Wall -O -I/usr/local/qt/include
-#
-CXXFLAGS = -std=c++11 -Wall -g
+# Directories
+CPP_DIR = SourcesCpp
+JAVA_DIR = Swing
 
-#
-# Options de l'editeur de liens
-#
-LDFLAGS = 
+# C++ source files
+CPP_SOURCES = $(CPP_DIR)/ccsocket.cpp \
+              $(CPP_DIR)/tcpserver.cpp \
+              $(CPP_DIR)/Multimidia.cpp \
+              $(CPP_DIR)/server.cpp \
+			  $(CPP_DIR)/ccsocket.h \
+              $(CPP_DIR)/tcpserver.h \
+              $(CPP_DIR)/Multimidia.h \
+              $(CPP_DIR)/MediaManager.h \
+              $(CPP_DIR)/group.h \
+              $(CPP_DIR)/Photo.h \
+              $(CPP_DIR)/Video.h \
+              $(CPP_DIR)/film.h
 
-#
-# Librairies a utiliser
-# Exemple: LDLIBS = -L/usr/local/qt/lib -lqt
-#
-LDLIBS = 
+# C++ object files
+CPP_OBJECTS = $(CPP_SOURCES:.cpp=.o)
 
+# C++ executable
+SERVER_EXE = $(CPP_DIR)/server
 
-##########################################
-#
-# Regles de construction/destruction des .o et de l'executable
-# depend-${PROG} sera un fichier contenant les dependances
-#
- 
-all: ${PROG}
+# Java source files
+JAVA_SOURCES = $(JAVA_DIR)/MainWindow.java \
+               $(JAVA_DIR)/Client.java
 
-run: ${PROG}
-	./${PROG}
+# Java class files
+JAVA_CLASSES = $(JAVA_SOURCES:.java=.class)
 
-${PROG}: depend-${PROG} ${OBJETS}
-	${CXX} -o $@ ${CXXFLAGS} ${LDFLAGS} ${OBJETS} ${LDLIBS}
+# Default target
+.PHONY: all
+all: $(SERVER_EXE) $(JAVA_CLASSES)
 
+# Rule to build the server executable
+$(SERVER_EXE): $(CPP_OBJECTS)
+	$(CXX) $(CXXFLAGS) -o $(SERVER_EXE) $(CPP_OBJECTS)
+
+# Rule to compile C++ source files into object files
+$(CPP_DIR)/%.o: $(CPP_DIR)/%.cpp $(CPP_HEADERS)
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+# Rule to compile Java source files
+$(JAVA_DIR)/%.class: $(JAVA_DIR)/%.java
+	$(JAVAC) -d $(JAVA_DIR) $<
+
+# Run the server and client
+.PHONY: run
+run: all
+	@echo "Starting server..."
+	@cd $(CPP_DIR) && ./server &
+	@sleep 1
+	@echo "Starting client..."
+	cd $(JAVA_DIR) && $(JAVA) MainWindow
+	@echo "Shutting down server..."
+	@pkill -f "./server"
+
+# Clean up generated files
+.PHONY: clean
 clean:
-	-@$(RM) *.o depend-${PROG} core 1>/dev/null 2>&1
-
-clean-all: clean
-	-@$(RM) ${PROG} 1>/dev/null 2>&1
-  
-tar:
-	tar cvf ${PROG}.tar.gz ${SOURCES}
-
-# Gestion des dependances : creation automatique des dependances en utilisant 
-# l'option -MM de g++ (attention tous les compilateurs n'ont pas cette option)
-#
-depend-${PROG}:
-	${CXX} ${CXXFLAGS} -MM ${SOURCES} > depend-${PROG}
-
-
-###########################################
-#
-# Regles implicites
-#
-
-.SUFFIXES: .cpp .cxx .c
-
-.cpp.o:
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
-
-.cxx.o:
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
-
-.c.o:
-	$(CC) -c (CFLAGS) $(INCPATH) -o $@ $<
-
-
-#############################################
-#
-# Inclusion du fichier des dependances
-#
--include depend-${PROG}
+	rm -f $(CPP_DIR)/*.o $(SERVER_EXE)
+	rm -f $(JAVA_DIR)/*.class
